@@ -9,3 +9,12 @@ body{
 .mb20{
 	margin-bottom: 20px;
 }
+
+#upgrades li{
+	margin-bottom: 10px;
+}
+
+#save, #load{
+	margin-right: 20px;
+	margin-top: 10px;
+}

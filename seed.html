@@ -10,12 +10,13 @@
 	<body>
 		<div class="container">
 			<ul class="nav nav-tabs">
-  			<li role="presentation" class="active pointer" id="tabWidgets"><a>Widgets</a></li>
-  			<li role="presentation" class="pointer" id="tabUpgrades"><span></span><a id="link-upgrade">Upgrades</a></li>
-  			<li role="presentation" class="pointer" id="tabAbout"><a>About</a></li>
+  				<li role="presentation" class="active pointer" id="tabWidgets"><a>Widgets</a></li>
+  				<li role="presentation" class="pointer" id="tabUpgrades"><span></span><a id="link-upgrade">Upgrades</a></li>
+  				<li role="presentation" class="pointer" id="tabAbout"><a>About</a></li>
 			</ul>
 
 			<div id="widgets">
+				<p class="mb20 text-right"><a id="save" class="btn btn-primary">Save</a><a id="load" class="btn btn-success">Load</a></p>				
 				<h2>Widgets: <span id="widget-count">0</span> (<span id="widget-per-second"></span> per second)</h1>
 
 				<button class="btn btn-success" id="produce-widget">Produce Widget</button>
@@ -38,13 +39,8 @@
 
 				<h2>Coding exercises:</h2>
 
-				<ul>
-    				<li>Change the starting costs and see how it affects the game</li>
-    				<li>Add two more levels of widgeteers</li>
-    				<li>Add stats near the top showing widgets per second and the number of widgeteers of each type</li>
-    				<li>Add an upgrades section</li>
-    				<li>Add save/load buttons that use localStorage.setItem() and localStorage.getItem()</li>
-    				<li>Check the Bootstrap 3 checkbox in the upper left and change the &lt;button&gt; elements to use &lt;div class="btn btn-primary"&gt; instead</li>
+				<ul>    				
+    				<li>Add save/load buttons that use localStorage.setItem() and localStorage.getItem()</li>    				
 				</ul>
 			</div>
 			<div id="upgrades">

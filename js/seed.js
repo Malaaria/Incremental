@@ -110,6 +110,14 @@ $('#tabAbout').on('click', function () {
     $('#tabAbout').addClass("active");     
 });
 
+$('#save').on('click', function () {
+    save();
+});
+
+$('#load').on('click', function () {
+    load();
+});
+
 function getIncrementNovice(divider){
     return ((numNoviceWidgeteers * 1  + (numNoviceUpgrades * 3))) / divider;
 }
@@ -147,6 +155,42 @@ function getUpgradeNumber(){
         $('#link-upgrade').addClass("notification-icon");
         $('#link-upgrade').attr("data-count", numberOfUpgrade);
     }
+}
+
+function save(){
+    localStorage.setItem('numWidgets', numWidgets);
+    localStorage.setItem('numNoviceWidgeteers', numNoviceWidgeteers);
+    localStorage.setItem('numMasterWidgeteers', numMasterWidgeteers);
+    localStorage.setItem('numEpicWidgeteers', numEpicWidgeteers);
+    localStorage.setItem('numLegendWidgeteers', numLegendWidgeteers);
+    localStorage.setItem('numNoviceUpgrades', numNoviceUpgrades);
+    localStorage.setItem('numMasterUpgrades', numMasterUpgrades);
+    localStorage.setItem('numEpicUpgrades', numEpicUpgrades);
+    localStorage.setItem('numLegendUpgrades', numLegendUpgrades);
+    localStorage.setItem('numClickUpgrades', numClickUpgrades);
+}
+
+function load(){
+    if(localStorage.getItem('numWidgets')!=null)
+        numWidgets = localStorage.getItem('numWidgets');
+    if(localStorage.getItem('numNoviceWidgeteers')!=null)
+        numNoviceWidgeteers = localStorage.getItem('numNoviceWidgeteers');
+    if(localStorage.getItem('numMasterWidgeteers')!=null)
+        numMasterWidgeteers = localStorage.getItem('numMasterWidgeteers');
+    if(localStorage.getItem('numEpicWidgeteers')!=null)
+        numEpicWidgeteers = localStorage.getItem('numEpicWidgeteers');
+    if(localStorage.getItem('numLegendWidgeteers')!=null)
+        numLegendWidgeteers = localStorage.getItem('numLegendWidgeteers');
+    if(localStorage.getItem('numNoviceUpgrades')!=null)
+        numNoviceUpgrades = localStorage.getItem('numNoviceUpgrades');
+    if(localStorage.getItem('numMasterUpgrades')!=null)
+        numMasterUpgrades = localStorage.getItem('numMasterUpgrades');
+    if(localStorage.getItem('numEpicUpgrades')!=null)
+        numEpicUpgrades = localStorage.getItem('numEpicUpgrades');
+    if(localStorage.getItem('numLegendUpgrades')!=null)
+        numLegendUpgrades = localStorage.getItem('numLegendUpgrades');
+    if(localStorage.getItem('numClickUpgrades')!=null)
+        numClickUpgrades = localStorage.getItem('numClickUpgrades');
 }
 
 // Run UI update code every 10ms
